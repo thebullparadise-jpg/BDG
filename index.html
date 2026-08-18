@@ -4,401 +4,296 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BDG VIP Community</title>
+  <title>BDG VIP</title>
+
+  <!-- ============================= -->
+  <!-- META PIXEL CODE -->
+  <!-- ============================= -->
+
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1540128790732647');
+  fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1540128790732647&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+
+  <!-- End Meta Pixel Code -->
+
 
   <style>
+
     * {
       box-sizing: border-box;
-    }
-
-    html,
-    body {
       margin: 0;
       padding: 0;
-      min-height: 100%;
     }
 
     body {
       min-height: 100vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 20px;
-
       font-family: Arial, Helvetica, sans-serif;
-
-      color: #ffffff;
-
       background:
-        radial-gradient(
-          circle at 50% 0%,
-          #173d30 0%,
-          #0d1a21 42%,
-          #070d13 100%
-        );
+        radial-gradient(circle at top, #12352e 0%, #071016 42%, #050b10 100%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
     }
 
     .container {
       width: 100%;
-      max-width: 450px;
-    }
-
-    .card {
-      width: 100%;
-
-      padding: 35px 25px 27px;
-
+      max-width: 440px;
+      background: #0b1119;
+      border: 1px solid #1f765c;
+      border-radius: 26px;
+      padding: 34px 26px 28px;
       text-align: center;
-
-      background: #0b121b;
-
-      border: 1px solid #245e47;
-
-      border-radius: 25px;
-
       box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.45),
-        0 0 35px rgba(66, 255, 154, 0.06);
+        0 0 40px rgba(49, 255, 155, 0.08);
     }
 
-    /* PROFILE PHOTO */
+    .profile-wrapper {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 22px;
+      padding: 5px;
+      border-radius: 50%;
+      background: #48ff9a;
+      box-shadow:
+        0 0 25px rgba(72, 255, 154, 0.35);
+    }
 
     .profile {
-      width: 125px;
-      height: 125px;
-
-      margin: 0 auto 21px;
-
-      overflow: hidden;
-
-      border-radius: 50%;
-
-      border: 4px solid #42ff9a;
-
-      background: #111d26;
-
-      box-shadow:
-        0 0 30px rgba(66, 255, 154, 0.30);
-    }
-
-    .profile img {
       width: 100%;
       height: 100%;
-
-      display: block;
-
+      border-radius: 50%;
       object-fit: cover;
-      object-position: center;
+      display: block;
+      border: 4px solid #0b1119;
     }
-
-    /* BADGE */
 
     .badge {
       display: inline-block;
-
-      padding: 7px 15px;
-
-      border: 1px solid #287c59;
-
+      padding: 8px 17px;
+      border: 1px solid #237a5d;
       border-radius: 30px;
-
-      background: rgba(66, 255, 154, 0.05);
-
-      color: #42ff9a;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
+      color: #48ff9a;
+      font-size: 12px;
+      font-weight: bold;
       letter-spacing: 1px;
+      margin-bottom: 20px;
+      background: rgba(72, 255, 154, 0.05);
     }
 
-    /* TITLE */
-
     h1 {
-      margin: 18px 0 13px;
-
-      font-size: 32px;
-
-      line-height: 1.1;
-
-      font-weight: 900;
+      font-size: 34px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      font-weight: 800;
     }
 
     h1 span {
-      color: #42ff9a;
+      color: #48ff9a;
     }
-
-    /* DESCRIPTION */
 
     .description {
-      max-width: 380px;
-
-      margin: 0 auto 25px;
-
-      color: #cbd5df;
-
+      color: #c9d2da;
       font-size: 15px;
-
-      line-height: 1.65;
-    }
-
-    /* FEATURES */
-
-    .features {
-      display: grid;
-
-      gap: 10px;
-
-      margin-bottom: 25px;
+      line-height: 1.8;
+      margin-bottom: 24px;
     }
 
     .feature {
-      display: flex;
-
-      align-items: center;
-
-      gap: 11px;
-
-      padding: 13px 15px;
-
       text-align: left;
-
-      background: #131c25;
-
-      border: 1px solid #26323d;
-
-      border-radius: 13px;
-
-      color: #e5ebf0;
-
+      background: #151c25;
+      border: 1px solid #29323d;
+      border-radius: 14px;
+      padding: 15px;
+      margin-bottom: 10px;
       font-size: 14px;
+      color: #e7edf2;
     }
 
     .check {
-      width: 24px;
-      height: 24px;
-
-      min-width: 24px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 50%;
-
-      background: #42ff9a;
-
-      color: #06130c;
-
-      font-size: 14px;
-
-      font-weight: 900;
+      color: #48ff9a;
+      font-weight: bold;
     }
 
-    /* JOIN BUTTON */
-
     .join-button {
-      display: block;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-
-      padding: 18px 20px;
-
-      border: none;
-
-      border-radius: 36px;
-
-      background:
-        linear-gradient(
-          90deg,
-          #32d879,
-          #42ff9a
-        );
-
-      color: #06130c;
-
+      min-height: 58px;
+      margin-top: 25px;
+      border-radius: 35px;
+      background: #48e68c;
+      color: #06100b;
       text-decoration: none;
-
-      font-size: 16px;
-
-      font-weight: 900;
-
-      cursor: pointer;
-
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
       box-shadow:
-        0 10px 30px rgba(66, 255, 154, 0.18);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+        0 8px 25px rgba(72, 230, 140, 0.18);
     }
 
     .join-button:hover {
       transform: translateY(-2px);
-
       box-shadow:
-        0 14px 36px rgba(66, 255, 154, 0.30);
+        0 12px 30px rgba(72, 230, 140, 0.28);
     }
 
     .join-button:active {
-      transform: translateY(0);
+      transform: scale(0.98);
     }
 
-    /* FOOTER */
+    .rocket {
+      margin-right: 8px;
+    }
 
     .footer {
-      margin-top: 18px;
-
-      color: #718096;
-
-      font-size: 11px;
-
-      line-height: 1.5;
+      margin-top: 25px;
+      color: #7f929f;
+      font-size: 12px;
+      line-height: 1.7;
     }
-
-    /* MOBILE */
 
     @media (max-width: 480px) {
 
       body {
-        padding: 12px;
+        padding: 15px;
       }
 
-      .card {
-        padding: 29px 18px 24px;
-      }
-
-      .profile {
-        width: 108px;
-        height: 108px;
+      .container {
+        padding: 28px 20px 24px;
+        border-radius: 22px;
       }
 
       h1 {
         font-size: 29px;
       }
 
-      .description {
-        font-size: 14px;
-      }
-
-      .feature {
-        font-size: 13px;
+      .profile-wrapper {
+        width: 115px;
+        height: 115px;
       }
 
       .join-button {
         font-size: 15px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <div class="container">
+  <main class="container">
 
-    <div class="card">
-
-      <!-- PROFILE PHOTO -->
-      <!--
-        IMPORTANT:
-        Upload your photo to the SAME GitHub repository
-        and name the file exactly:
-
-        profile.jpg
-      -->
-
-      <div class="profile">
-        <img
-          src="./profile.jpg"
-          alt="BDG VIP Profile"
-        >
-      </div>
-
-
-      <!-- BADGE -->
-
-      <div class="badge">
-        OFFICIAL TELEGRAM COMMUNITY
-      </div>
-
-
-      <!-- TITLE -->
-
-      <h1>
-        WELCOME TO
-        <span>BDG VIP</span>
-      </h1>
-
-
-      <!-- DESCRIPTION -->
-
-      <p class="description">
-        Join our Telegram community for
-        updates, announcements, educational
-        content and useful information.
-      </p>
-
-
-      <!-- FEATURES -->
-
-      <div class="features">
-
-        <div class="feature">
-          <div class="check">✓</div>
-          <div>Regular community updates</div>
-        </div>
-
-        <div class="feature">
-          <div class="check">✓</div>
-          <div>Educational and informational content</div>
-        </div>
-
-        <div class="feature">
-          <div class="check">✓</div>
-          <div>Direct access through Telegram</div>
-        </div>
-
-      </div>
-
-
-      <!--
-        =========================================
-        YOUR EXISTING TRACKER
-        =========================================
-
-        The button goes to your tracker first.
-
-        Tracker:
-        telegram-ad-tracker-dovl.vercel.app/api/go
-
-        The tracker records the click and then
-        redirects the visitor to Telegram.
-      -->
-
-      <a
-        class="join-button"
-        href="https://telegram-ad-tracker-dovl.vercel.app/api/go?campaign=CLIENT_NAME&ad=AD_NAME"
+    <!-- PROFILE PHOTO -->
+    <div class="profile-wrapper">
+      <img
+        src="./profile.jpg"
+        alt="BDG VIP Profile"
+        class="profile"
       >
-        🚀 JOIN TELEGRAM CHANNEL
-      </a>
-
-
-      <!-- FOOTER -->
-
-      <div class="footer">
-        By continuing, you will be redirected
-        to Telegram to send a join request.
-        <br>
-        © 2026 BDG VIP
-      </div>
-
     </div>
 
-  </div>
+
+    <!-- BADGE -->
+    <div class="badge">
+      OFFICIAL LEARNING COMMUNITY
+    </div>
+
+
+    <!-- TITLE -->
+    <h1>
+      WELCOME TO <span>BDG VIP</span>
+    </h1>
+
+
+    <!-- DESCRIPTION -->
+    <p class="description">
+      Join our Telegram learning community for educational
+      content, updates, announcements and useful information.
+    </p>
+
+
+    <!-- FEATURES -->
+
+    <div class="feature">
+      <span class="check">✓</span>
+      Educational community content
+    </div>
+
+    <div class="feature">
+      <span class="check">✓</span>
+      Regular learning updates and announcements
+    </div>
+
+    <div class="feature">
+      <span class="check">✓</span>
+      Join directly through Telegram
+    </div>
+
+
+    <!-- JOIN BUTTON -->
+    <a
+      class="join-button"
+      href="https://telegram-ad-tracker-dovl.vercel.app/api/go?campaign=CLIENT_NAME&ad=AD_NAME"
+      onclick="fbq('track', 'Lead');"
+    >
+      <span class="rocket">🚀</span>
+      JOIN TELEGRAM CHANNEL
+    </a>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © 2026 BDG VIP. All rights reserved.<br>
+      Educational content only. Please make your own decisions.
+    </div>
+
+  </main>
+
+
+  <script>
+
+    /*
+      Track the Telegram button click separately.
+
+      PageView = landing page visit
+      Lead     = click on JOIN TELEGRAM
+    */
+
+    document.querySelector('.join-button').addEventListener('click', function () {
+
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
