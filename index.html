@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BDG VIP Community</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: #ffffff;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #183d30 0%,
+          #0c171f 42%,
+          #060c12 100%
+        );
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .card {
+      width: 100%;
+
+      padding: 34px 24px 27px;
+
+      text-align: center;
+
+      background: #0b121b;
+
+      border: 1px solid #245e47;
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 35px rgba(66, 255, 154, 0.06);
+    }
+
+    /* LOGO */
+
+    .logo {
+      width: 120px;
+      height: 120px;
+
+      margin: 0 auto 21px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      border: 4px solid #42ff9a;
+
+      background:
+        linear-gradient(
+          145deg,
+          #173b30,
+          #111d26
+        );
+
+      color: #42ff9a;
+
+      font-size: 30px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      box-shadow:
+        0 0 28px rgba(66, 255, 154, 0.25);
+    }
+
+    /* BADGE */
+
+    .badge {
+      display: inline-block;
+
+      padding: 7px 15px;
+
+      border: 1px solid #287c59;
+
+      border-radius: 30px;
+
+      background:
+        rgba(66, 255, 154, 0.05);
+
+      color: #42ff9a;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+    }
+
+    /* TITLE */
+
+    h1 {
+      margin: 18px 0 13px;
+
+      font-size: 32px;
+
+      line-height: 1.1;
+
+      font-weight: 900;
+    }
+
+    h1 span {
+      color: #42ff9a;
+    }
+
+    /* DESCRIPTION */
+
+    .description {
+      max-width: 370px;
+
+      margin: 0 auto 25px;
+
+      color: #cbd5df;
+
+      font-size: 15px;
+
+      line-height: 1.65;
+    }
+
+    /* FEATURES */
+
+    .features {
+      display: grid;
+
+      gap: 10px;
+
+      margin-bottom: 25px;
+    }
+
+    .feature {
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      padding: 13px 15px;
+
+      text-align: left;
+
+      background: #131c25;
+
+      border: 1px solid #26323d;
+
+      border-radius: 13px;
+
+      color: #e5ebf0;
+
+      font-size: 14px;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+
+      min-width: 24px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #42ff9a;
+
+      color: #06130c;
+
+      font-size: 14px;
+
+      font-weight: 900;
+    }
+
+    /* JOIN BUTTON */
+
+    .join-button {
+      display: block;
+
+      width: 100%;
+
+      padding: 18px 20px;
+
+      border-radius: 36px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #32d879,
+          #42ff9a
+        );
+
+      color: #06130c;
+
+      text-decoration: none;
+
+      font-size: 16px;
+
+      font-weight: 900;
+
+      box-shadow:
+        0 10px 30px rgba(66, 255, 154, 0.18);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .join-button:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 14px 36px rgba(66, 255, 154, 0.30);
+    }
+
+    .join-button:active {
+      transform: translateY(0);
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 18px;
+
+      color: #718096;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 480px) {
+
+      body {
+        padding: 12px;
+      }
+
+      .card {
+        padding: 29px 18px 24px;
+      }
+
+      .logo {
+        width: 105px;
+        height: 105px;
+        font-size: 27px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <!-- LOGO -->
+
+      <div class="logo">
+        BDG
+      </div>
+
+
+      <!-- BADGE -->
+
+      <div class="badge">
+        OFFICIAL TELEGRAM COMMUNITY
+      </div>
+
+
+      <!-- TITLE -->
+
+      <h1>
+        WELCOME TO
+        <span>BDG VIP</span>
+      </h1>
+
+
+      <!-- DESCRIPTION -->
+
+      <p class="description">
+        Join our Telegram community for
+        updates, announcements, educational
+        content and community information.
+      </p>
+
+
+      <!-- FEATURES -->
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="check">✓</div>
+
+          <div>
+            Regular community updates
+          </div>
+        </div>
+
+
+        <div class="feature">
+          <div class="check">✓</div>
+
+          <div>
+            Educational and informational content
+          </div>
+        </div>
+
+
+        <div class="feature">
+          <div class="check">✓</div>
+
+          <div>
+            Direct access through Telegram
+          </div>
+        </div>
+
+      </div>
+
+
+      <!--
+        =========================================
+        TRACKING BUTTON
+        =========================================
+
+        IMPORTANT:
+
+        This button goes to YOUR EXISTING
+        tracker.
+
+        DO NOT replace this with the raw
+        Telegram invite link.
+
+        Change CLIENT_NAME and AD_NAME when
+        creating a link for a different client/ad.
+      -->
+
+      <a
+        class="join-button"
+        href="https://telegram-ad-tracker-dovl.vercel.app/api/go?campaign=CLIENT_NAME&ad=AD_NAME"
+      >
+        🚀 JOIN TELEGRAM CHANNEL
+      </a>
+
+
+      <!-- FOOTER -->
+
+      <div class="footer">
+        By continuing, you will be redirected
+        to Telegram to send a join request.
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+
